@@ -79,26 +79,130 @@ console.log("Introduction to Arrays");
 
 // Array Map
 
-const inventory = [
-  {
-    price: 5,
-    name: "eggs",
-  },
-  {
-    price: 4,
-    name: "ham",
-  },
-  {
-    price: 3,
-    name: "mayo",
-  },
-  {
-    price: 5,
-    name: "bread",
-  },
-];
+// const inventory = [
+//   {
+//     price: 5,
+//     name: "eggs",
+//   },
+//   {
+//     price: 4,
+//     name: "ham",
+//   },
+//   {
+//     price: 3,
+//     name: "mayo",
+//   },
+//   {
+//     price: 5,
+//     name: "bread",
+//   },
+// ];
 
-const prices = inventory.map((item) => item.price);
-const items = inventory.map((item) => item.name);
-console.log(prices);
-console.log(items);
+// const prices = inventory.map((item) => item.price);
+// const items = inventory.map((item) => item.name);
+// console.log(prices);
+// console.log(items);
+
+// Array Filter
+
+// const numbers = [-10, 0, -2, 15, -36, 25];
+
+// const positiveNumbers = numbers.filter((number) => number >= 0);
+// console.log(positiveNumbers);
+
+// const employeesData = [
+//   {
+//     name: "Sebastian",
+//     overtime: 5,
+//   },
+//   {
+//     name: "Cardi Vee",
+//     overtime: 10,
+//   },
+//   {
+//     name: "George Lopez",
+//     overtime: 12,
+//   },
+// ];
+
+// const employeesToReward = employeesData.filter(
+//   (employee) => employee.overtime >= 7
+// );
+// console.log(employeesToReward);
+
+// const employeesName = employeesToReward.map((employee) => employee.name);
+// console.log(employeesName);
+
+// employeesName.forEach((name) => console.log(`${name} received a reward`));
+
+// Array Find
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const value = numbers.find((number) => number > 5);
+// console.log(value);
+
+// const states = ["Meeut", "Ghaziabad", "Delhi", "Chandigarh"];
+// const state = states.find((state) => state.startsWith("C"));
+// console.log(state);
+
+// Array Includes
+
+// const array1 = [1, 2, 3];
+// const pets = ["cat", "dog", "llama"];
+// console.log(array1.includes(2));
+// console.log(pets.includes("cat"));
+
+// const bookShelf = ["Mobby Dick", "The Great Gatsby", "Pride and Prejudice"];
+
+// if (bookShelf.includes("Moby Dick")) {
+//   console.log("We have that book");
+// } else {
+//   console.log("We dont have the book");
+// }
+
+// Array Sort
+
+// const names = ["Anne", "Carl", "Bob", "Dean"];
+// names.sort();
+// console.log(names);
+
+// const numbers = [6, 7, 3, 9, 1, 15, 33, 99];
+// numbers.sort((a, b) => a - b);
+// console.log(numbers);
+// numbers.sort((a, b) => b - a);
+// console.log(numbers);
+
+// Array Some and Every
+
+// const array = [1, 2, 3, 4, 5];
+
+// // const isGreaterThan3 = (number) => number > 5;
+
+// // console.log(array.some(isGreaterThan3)); // true
+
+// console.log(array.some((number) => number > 3));
+
+// console.log(array.every((number) => number > 3));
+
+// Array Reduce
+
+const groceryList = [29, 12, 35, 45, 87, 110];
+
+// let totalPrice = 0;
+// groceryList.forEach((item) => (totalPrice += item));
+// console.log(totalPrice);
+
+const total = groceryList.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
+
+console.log(total);
+
+const numbers = [1, 2, 3, 4, 5];
+const totalValue = numbers.reduce((acc, val) => {
+  console.log(acc, val);
+  return acc + val;
+}, 0);
+
+console.log(totalValue);
